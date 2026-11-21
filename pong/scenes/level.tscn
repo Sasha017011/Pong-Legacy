@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dkb3j7vpupkl4"]
+
+[ext_resource type="PackedScene" uid="uid://bkgsgplmdrdk4" path="res://scenes/ball.tscn" id="1_2q6dc"]
+[ext_resource type="PackedScene" uid="uid://bkadht57160lf" path="res://scenes/paddle.tscn" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://mkm1wjtvulh0" path="res://scenes/ui.tscn" id="3_w8frs"]
+[ext_resource type="AudioStream" uid="uid://mi5fypmf0xn4" path="res://sounds/pong_ball.wav" id="4_2r41h"]
+[ext_resource type="AudioStream" uid="uid://d20jnr1ciaetn" path="res://sounds/pong_paddle.wav" id="5_klq6b"]
+[ext_resource type="AudioStream" uid="uid://5i40b31vphgn" path="res://sounds/pong_score.wav" id="6_b121j"]
+
+[node name="Level" type="Node2D" unique_id=122092848]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1100067296]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Ball" parent="." unique_id=1181177336 instance=ExtResource("1_2q6dc")]
+position = Vector2(576, 324)
+
+[node name="Paddle" parent="." unique_id=645082863 instance=ExtResource("2_w7c3h")]
+position = Vector2(41.635, 324)
+
+[node name="Paddle2" parent="." unique_id=1757973190 instance=ExtResource("2_w7c3h")]
+position = Vector2(1110.365, 324)
+ai = true
+
+[node name="UI" parent="." unique_id=1626855561 instance=ExtResource("3_w8frs")]
+
+[node name="PongBall" type="AudioStreamPlayer" parent="." unique_id=1768902047]
+stream = ExtResource("4_2r41h")
+
+[node name="PongPaddle" type="AudioStreamPlayer" parent="." unique_id=434902420]
+stream = ExtResource("5_klq6b")
+
+[node name="PongScore" type="AudioStreamPlayer" parent="." unique_id=1089050409]
+stream = ExtResource("6_b121j")

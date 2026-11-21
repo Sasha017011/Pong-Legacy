@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bkgsgplmdrdk4"]
+
+[ext_resource type="Script" uid="uid://bqokjmantxa5w" path="res://scripts/ball.gd" id="1_7s4qf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xgho"]
+
+[node name="Ball" type="CharacterBody2D" unique_id=1181177336]
+script = ExtResource("1_7s4qf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1249094426]
+shape = SubResource("CircleShape2D_5xgho")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=830132915]
+polygon = PackedVector2Array(-10, 0, -8, 6, -4, 9, 0, 10, 5, 9, 7, 7, 10, 3, 10, -1, 8, -6, 4, -9, 0, -10, -6, -8, -8, -6, -10, -2)
